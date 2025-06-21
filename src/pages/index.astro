@@ -3,12 +3,20 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import Header from '../components/Header.astro';
+import Contenido from '../components/Contenido.astro';
+import Formulario from '../components/Formulario.astro';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Header></Header>
-	<Welcome />
+	<main class="flex flex-row w-full justify-center items-center px-[5%] gap-9">
+		<Contenido />
+		<div class="bg-[url('/src/img/bg-One.webp')] bg-cover bg-center w-1/2 h-screen flex items-center justify-center">
+			<img/>
+			<Formulario />
+		</div>
+	</main>
 </Layout>
