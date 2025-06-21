@@ -1,13 +1,26 @@
-<form class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-[100%]" action="/submit" method="POST">
-    <label for="name">Nombre:</label>
-    <input class="border-blue-900 border-2 rounded-2xl p-x-5 p-1.5 w-full" type="text" id="name" name="name" required /> 
-    <label for="email">Correo electrónico:</label>
-    <input class="border-blue-900 border-2 rounded-2xl p-x-5 p-1.5 w-full"  type="email" id="email" name="email" required />
-    <label for="phone">Teléfono:</label>
-    <input class="border-blue-900 border-2 rounded-2xl p-x-5 p-1.5 w-full"  type="tel" id="phone" name="phone" required />
-    <label for="date">Fecha de reserva:</label>
-    <input class="border-blue-900 border-2 rounded-2xl p-x-5 p-1.5 w-full"  type="date" id="date" name="date" required />
-    <label for="messege">Comentario:</label>
-    <textarea class="border-blue-900 border-2 rounded-2xl p-x-5 p-1.5 w-full"  type="text" id="comentario" name="comentario" required />
-    <button type="submit" class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl">Enviar información</button>   
+---
+
+
+---
+
+
+<form 
+action="/api/email/create-email"
+class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full" action="/submit" method="POST">
+  <label for="name">Nombre:</label>
+  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="text" id="name" name="name" required />
+
+  <label for="email">Correo electrónico:</label>
+  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="email" id="email" name="email" required />
+
+  <label for="phone">Teléfono:</label>
+  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="tel" id="phone" name="phone" required />
+
+  <label for="date">Fecha de reserva:</label>
+  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="date" id="date" name="date" required />
+
+  <label for="comentario">Comentario:</label>
+  <textarea class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" id="comentario" name="comentario" required></textarea>
+
+  <button type="submit" class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl">Enviar información</button>
 </form>
