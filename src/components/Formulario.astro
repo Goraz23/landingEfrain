@@ -1,18 +1,8 @@
----
-
----
-
-<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"
-></script>
- <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
 <form
+  id="demo-form"
   action="http://localhost:3000/api/email/create-email"
-  class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full"
   method="POST"
+  class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full"
 >
   <label for="name">Nombre:</label>
   <input
@@ -57,11 +47,13 @@
     name="comentario"
     required></textarea>
 
+  <div class="g-recaptcha" data-sitekey="6LdWnGwrAAAAADkCThC7g2axvOEd_mTZNebR060M"></div>
+
   <button
     type="submit"
-    class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl g-recaptcha"
-    data-sitekey="6LdlkmwrAAAAAKX8jWvgs9i7U_6fXOxYg57Ff15F"
-    data-callback="onSubmit"
-    data-action="submit">Enviar información</button
-  >
+    class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl">
+    Enviar información
+  </button>
 </form>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
