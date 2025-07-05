@@ -1,7 +1,5 @@
 <form
   id="demo-form"
-  action="http://localhost:3000/api/email/create-email"
-  method="POST"
   class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full"
 >
   <label for="name">Nombre:</label>
@@ -45,15 +43,19 @@
     class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
     id="comentario"
     name="comentario"
-    required></textarea>
+    required
+  ></textarea>
 
   <div class="g-recaptcha" data-sitekey="6LdWnGwrAAAAADkCThC7g2axvOEd_mTZNebR060M"></div>
 
   <button
     type="submit"
-    class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl">
+    class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl"
+  >
     Enviar información
   </button>
 </form>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/form-handler.js" defer></script>
