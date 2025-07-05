@@ -1,26 +1,61 @@
----
-
-
----
-
-
-<form 
-action="/api/email/create-email"
-class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full" action="/submit" method="POST">
+<form
+  id="demo-form"
+  class="flex monsterrat flex-col gap-5 items-start bg-blue-100 p-5 rounded-3xl w-full"
+>
   <label for="name">Nombre:</label>
-  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="text" id="name" name="name" required />
+  <input
+    class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
+    type="text"
+    id="name"
+    name="name"
+    required
+  />
 
   <label for="email">Correo electrónico:</label>
-  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="email" id="email" name="email" required />
+  <input
+    class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
+    type="email"
+    id="email"
+    name="email"
+    required
+  />
 
   <label for="phone">Teléfono:</label>
-  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="tel" id="phone" name="phone" required />
+  <input
+    class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
+    type="tel"
+    id="phone"
+    name="phone"
+    required
+  />
 
   <label for="date">Fecha de reserva:</label>
-  <input class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" type="date" id="date" name="date" required />
+  <input
+    class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
+    type="date"
+    id="date"
+    name="date"
+    required
+  />
 
   <label for="comentario">Comentario:</label>
-  <textarea class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full" id="comentario" name="comentario" required></textarea>
+  <textarea
+    class="border-blue-900 border-2 rounded-2xl px-5 py-1.5 w-full"
+    id="comentario"
+    name="comentario"
+    required
+  ></textarea>
 
-  <button type="submit" class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl">Enviar información</button>
+  <div class="g-recaptcha" data-sitekey="6LdWnGwrAAAAADkCThC7g2axvOEd_mTZNebR060M"></div>
+
+  <button
+    type="submit"
+    class="bg-blue-900 text-white py-1.5 px-7 rounded-3xl"
+  >
+    Enviar información
+  </button>
 </form>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/form-handler.js" defer></script>
