@@ -1,22 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-import Header from '../components/Header.astro';
+import Topbar from '../components/Topbar.astro';
+import Welcome from '../components/Welcome.astro';
 import Contenido from '../components/Contenido.astro';
 import Formulario from '../components/Formulario.astro';
-
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
 <Layout>
-	<main class="flex flex-row w-full justify-center items-center px-[5%] gap-9">
-		<Contenido />
-		<div class="bg-[url('/src/img/bg-One.webp')] bg-cover bg-center w-1/2 h-screen flex items-center justify-center">
-			<img/>
-			<Formulario />
-		</div>
-	</main>
+  <Topbar />
+
+  <section id="inicio" class="pt-20 min-h-screen flex justify-center items-center bg-white">
+    <Welcome />
+  </section>
+
+  <main class="w-full flex flex-col lg:flex-row justify-center items-start gap-10 px-[5%] py-16 bg-blue-50">
+    <div class="w-full lg:w-1/2">
+      <Contenido />
+    </div>
+
+    <div
+      id="formulario"
+      class="w-full lg:w-1/2 bg-[url('/src/img/bg-One.webp')] bg-cover bg-center rounded-3xl shadow-xl p-6 flex items-center justify-center"
+    >
+      <Formulario />
+    </div>
+  </main>
 </Layout>
